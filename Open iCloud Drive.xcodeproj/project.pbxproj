@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FCF711822352C8A200F290BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF711812352C8A200F290BB /* AppDelegate.swift */; };
-		FCF711842352C8A200F290BB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF711832352C8A200F290BB /* ContentView.swift */; };
 		FCF711862352C8A300F290BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCF711852352C8A300F290BB /* Assets.xcassets */; };
 		FCF711892352C8A300F290BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCF711882352C8A300F290BB /* Preview Assets.xcassets */; };
 		FCF7118C2352C8A300F290BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCF7118A2352C8A300F290BB /* Main.storyboard */; };
@@ -17,12 +16,12 @@
 /* Begin PBXFileReference section */
 		FCF7117E2352C8A200F290BB /* Open iCloud Drive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Open iCloud Drive.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF711812352C8A200F290BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FCF711832352C8A200F290BB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FCF711852352C8A300F290BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCF711882352C8A300F290BB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FCF7118B2352C8A300F290BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FCF7118D2352C8A300F290BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCF7118E2352C8A300F290BB /* Open_iCloud_Drive.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Open_iCloud_Drive.entitlements; sourceTree = "<group>"; };
+		FCF711942352CA5C00F290BB /* Open iCloud DriveRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Open iCloud DriveRelease.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +54,8 @@
 		FCF711802352C8A200F290BB /* Open iCloud Drive */ = {
 			isa = PBXGroup;
 			children = (
+				FCF711942352CA5C00F290BB /* Open iCloud DriveRelease.entitlements */,
 				FCF711812352C8A200F290BB /* AppDelegate.swift */,
-				FCF711832352C8A200F290BB /* ContentView.swift */,
 				FCF711852352C8A300F290BB /* Assets.xcassets */,
 				FCF7118A2352C8A300F290BB /* Main.storyboard */,
 				FCF7118D2352C8A300F290BB /* Info.plist */,
@@ -145,7 +144,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCF711842352C8A200F290BB /* ContentView.swift in Sources */,
 				FCF711822352C8A200F290BB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,7 +291,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "garylai.Open-iCloud-Drive";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -304,7 +302,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Open iCloud Drive/Open_iCloud_Drive.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Open iCloud Drive/Open iCloud DriveRelease.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Open iCloud Drive/Preview Content\"";
@@ -316,7 +315,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "garylai.Open-iCloud-Drive";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

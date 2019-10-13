@@ -12,28 +12,42 @@ import SwiftUI
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    var window: NSWindow!
-
+    var statusBarItem: NSStatusItem!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView()
+        NSApp.setActivationPolicy(.prohibited)
+        let statusBar = NSStatusBar.system
+        statusBarItem = statusBar.statusItem(
+            withLength: NSStatusItem.squareLength)
+        statusBarItem.button?.title = "☁️"
+        let statusBarMenu = NSMenu(title: "Cap Status Bar Menu")
+        statusBarItem.menu = statusBarMenu
+        statusBarMenu.addItem(
+            withTitle: "Open iCloud Drive",
+            action: #selector(AppDelegate.openiCloudDrive),
+            keyEquivalent: "")
+        statusBarMenu.addItem(NSMenuItem.separator())
+        statusBarMenu.addItem(
+            withTitle: "Quit",
+            action: #selector(AppDelegate.quit),
+            keyEquivalent: "")
+    }
+    
+    @objc func openiCloudDrive() {
+        let username = NSUserName()
+        let icloudDrivePath = "/Users/" + username + "/Library/Mobile Documents/com~apple~CloudDocs"
+        NSWorkspace.shared.selectFile(icloudDrivePath, inFileViewerRootedAtPath: icloudDrivePath)
+    }
 
-        // Create the window and set the content view. 
-        window = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
-            styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
-            backing: .buffered, defer: false)
-        window.center()
-        window.setFrameAutosaveName("Main Window")
-        window.contentView = NSHostingView(rootView: contentView)
-        window.makeKeyAndOrderFront(nil)
+    @objc func quit() {
+        NSApplication.shared.terminate(self)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
 
-
 }
+
+
 
