@@ -6,7 +6,7 @@ This app learns the idea from other cloud drive solutions, such as Dropbox and G
 
 ## How to use
 
-[Download the dmg file](https://github.com/imgarylai/Open-iCloud-Drive/releases). The latest version is recommended.
+[Download the dmg file](https://github.com/imgarylai/Open-iCloud-Drive/releases/download/v1.0.0/Open.iCloud.Drive.dmg). The latest version is recommended. For older versions, please check [release page](https://github.com/imgarylai/Open-iCloud-Drive/releases) to get all versions. 
 
 ## Screen Shot
 
