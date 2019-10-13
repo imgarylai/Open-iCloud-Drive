@@ -11,3 +11,8 @@ This app learns the idea from other cloud drive solutions, such as Dropbox and G
 ## Screen Shot
 
 ![Open iCloud Drive](screen-shot.png)
+
+
+## Problems?
+
+Please leave your questions in [issues page](https://github.com/imgarylai/Open-iCloud-Drive/issues). 
