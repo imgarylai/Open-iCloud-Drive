@@ -4,6 +4,10 @@ iCloud Drive is an easy to use cloud storage solution and file synchronization. 
 
 This app learns the idea from other cloud drive solutions, such as Dropbox and Google Drive. These apps have a shortcut on the menubar to open the folder in one click.  
 
+## How to use
+
+[Download the dmg file](https://github.com/imgarylai/Open-iCloud-Drive/releases). The latest version is recommended.
+
 ## Screen Shot
 
 ![Open iCloud Drive](screen-shot.png)
